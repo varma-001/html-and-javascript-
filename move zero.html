@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Move Zeros to End</title>
+  </head>
+  <body>
+    <p>Original Array: <span id="original"></span></p>
+    <p>Modified Array: <span id="modified"></span></p>
+
+    <script>
+      const originalArray = [1,0,5,0,7,2];
+      document.getElementById("original").textContent = originalArray;
+      const modifiedArray = moveZerosToEnd(originalArray);
+      document.getElementById("modified").textContent = modifiedArray;
+      function moveZerosToEnd(arr) {
+        let nonZeroIndex = 0;
+        for (let i= 0;i<arr.length;i++) 
+        {
+          if (arr[i] !== 0) {
+            arr[nonZeroIndex]=arr[i];
+            nonZeroIndex++;
+          }
+        }
+        while (nonZeroIndex < arr.length) {
+          arr[nonZeroIndex] = 0;
+          nonZeroIndex++;
+        }
+        return arr;
+      }
+    </script>
+  </body>
+</html>

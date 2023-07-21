@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script>
+    const myObject = ["Mercury","Gemini","Apollo",
+                     "Skylab","Skylab B","ISS"];
+function searchObject() {
+  const searchKey = document.getElementById('search-box').value;
+  if (myObject.includes(searchKey)) {
+    alert(`The key "${searchKey}" is found`);
+  } else {
+    alert(`The key "${searchKey}" is not found`);
+  }
+}
+</script>
+    <title>Search Box Example</title>
+  </head>
+  <body>
+    <input type="text" id="search-box">
+    <button type="submit" onclick="searchObject()">Search</button>
+  </body>
+</html>
+

@@ -1,0 +1,35 @@
+.container {
+    width: 400px;
+    height: 400px;
+    background-color: #f30606;
+    position: relative;
+  }
+  
+  .object {
+    width: 50px;
+    height: 50px;
+    background-color: #4b0f76;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10%;
+    cursor: pointer;
+    animation: move 2s linear infinite;
+  }
+  
+  @keyframes move {
+    0% {
+      top: 50%;
+      left: 50%;
+    }
+    50% {
+      top: 10%;
+      left: 90%;
+    }
+    100% {
+      top: 50%;
+      left: 50%;
+    }
+  }
+  

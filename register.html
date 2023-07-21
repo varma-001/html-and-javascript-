@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <form>
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" name="firstname" required value=""><br><br>
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" name="lastname" required value=""><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <input type="submit" onclick="alert(my_fun())">
+      <p id="name-reg"></p>
+    </form>
+      <script>
+        var firstName = document.getElementById("firstname");
+        var lastName = document.getElementById("lastname");
+        function my_fun()
+        {
+            document.getElementById("name-reg").innerHTML = "firstname: " + firstName.value + "<br>lastname: "+ lastName.value;
+        }
+        </script>
+    </body>
+</html>

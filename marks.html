@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Scores</title>
+  </head>
+  <body>
+    <h1>Student Scores</h1>
+    <p id="student-info"></p>
+
+    <script>
+      function displayStudentInfo() {
+        const student = {
+          name: 'varma',
+          scores: [80, 90, 95, 85, 75]
+        };
+        
+        const nameElement = document.createElement('p');
+        nameElement.innerHTML = `Name: ${student.name}`;
+        const scoresElement = document.createElement('p');
+        scoresElement.innerHTML = `Exam Scores: ${student.scores.join(', ')}`;
+
+        const studentInfoElement = document.getElementById('student-info');
+        studentInfoElement.appendChild(nameElement);
+        studentInfoElement.appendChild(scoresElement);
+      }
+
+      displayStudentInfo();
+    </script>
+  </body>
+</html>

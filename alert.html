@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>alert</title>
+  </head>
+  <body>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName">
+    <br><br>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName">
+    <br><br>
+    <button onclick="displayFullName()">submit</button>
+    
+    <script>
+      function displayFullName() {
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        alert("Your full name is: " + firstName + " " + lastName);
+      }
+    </script>
+  </body>
+</html>
+
